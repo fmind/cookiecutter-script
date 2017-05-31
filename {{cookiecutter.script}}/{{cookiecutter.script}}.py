@@ -1,10 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
 """
 A simple python script.
 """
-
-from __future__ import print_function
 
 import argparse
 import sys
@@ -20,16 +17,11 @@ def f(x):
 
 
 def main(args):
-    x = args.infile.read()
+    text = args.infile.read()
 
-    return f(x)
+    return f(text)
 
 
 if __name__ == '__main__':
-    try:
-        args = PARSER.parse_args()
-        args.outfile.write(main(args))
-        sys.exit(0)
-    except Exception as e:
-        print(e, file=sys.stderr)
-        sys.exit(1)
+    args = PARSER.parse_args()
+    args.outfile.write(main(args))
