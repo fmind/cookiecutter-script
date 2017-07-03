@@ -8,15 +8,14 @@ import sys
 
 PARSER = argparse.ArgumentParser(description=__doc__)
 PARSER.add_argument('infile', nargs='?', type=argparse.FileType('r'), default=sys.stdin)
-PARSER.add_argument('outfile', nargs='?', type=argparse.FileType('w'), default=sys.stdout)
 
 
 def f(x):
-    """Function doc."""
+    """Docstring."""
     return x
 
 
-def main(args):
+def {{cookiecutter.script}}(infile):
     text = args.infile.read()
 
     return f(text)
@@ -24,4 +23,7 @@ def main(args):
 
 if __name__ == '__main__':
     args = PARSER.parse_args()
-    args.outfile.write(main(args))
+    sys.tracebacklimit = 0
+
+    output = {{cookiecutter.script}}(args.infile)
+    sys.stdout.write(output)
