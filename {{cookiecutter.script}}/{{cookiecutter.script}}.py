@@ -8,7 +8,7 @@ import logging
 import sys
 
 PARSER = argparse.ArgumentParser(description=__doc__)
-PARSER.add_argument('infile', nargs='?', type=argparse.FileType('r'), default=sys.stdin)
+PARSER.add_argument('infile', type=argparse.FileType('r'))
 
 
 def f(x):
