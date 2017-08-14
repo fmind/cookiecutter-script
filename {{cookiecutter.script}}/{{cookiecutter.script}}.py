@@ -3,8 +3,6 @@
 
 import argparse
 import logging
-import os
-import sys
 
 PARSER = argparse.ArgumentParser(description=__doc__)
 PARSER.add_argument('infile', type=argparse.FileType('r'))
@@ -17,8 +15,7 @@ def f(x):
 
 if __name__ == '__main__':
     args = PARSER.parse_args()
-    sys.tracebacklimit = 0
     logging.basicConfig()
 
-    for line in map(f, args.infile):
-        sys.stdout.write(line + os.linesep)
+    for line in args.infile:
+        print(f(line))
