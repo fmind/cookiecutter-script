@@ -3,9 +3,10 @@
 
 import argparse
 import logging
+import sys
 
 PARSER = argparse.ArgumentParser(description=__doc__)
-PARSER.add_argument('infile', type=argparse.FileType('r'))
+PARSER.add_argument('files', type=argparse.FileType('r'))
 
 
 def f(x):
@@ -13,9 +14,13 @@ def f(x):
     return x
 
 
-if __name__ == '__main__':
-    args = PARSER.parse_args()
-    logging.basicConfig()
+def main(args):
+    opts = PARSER.parse_args(args)
 
-    for line in args.infile:
-        print(f(line))
+    for file in opts.files:
+        print(f(file))
+
+
+if __name__ == '__main__':
+    logging.basicConfig()
+    main(sys.argv[1:])
