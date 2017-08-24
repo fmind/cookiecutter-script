@@ -15,6 +15,7 @@ def f(x):
 
 
 def main(args):
+    logging.basicConfig()
     opts = PARSER.parse_args(args)
 
     for file in opts.files:
@@ -22,5 +23,4 @@ def main(args):
 
 
 if __name__ == '__main__':
-    logging.basicConfig()
     main(sys.argv[1:])
