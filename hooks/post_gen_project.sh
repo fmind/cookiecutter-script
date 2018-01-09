@@ -1,6 +1,6 @@
 #!/bin/sh
 
-chmod u+x {{cookiecutter.script}}.py
-mv {{cookiecutter.script}}.py ../
+chmod u+x {{cookiecutter.name}}.py
+mv {{cookiecutter.name}}.py ../
 
-cd ..; rmdir {{cookiecutter.script}}
+cd ..; rmdir {{cookiecutter.name}}
