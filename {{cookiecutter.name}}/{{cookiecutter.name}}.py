@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
-"""A simple python script."""
+"""Docstring of the program."""
 
 import argparse
 import logging
 import sys
 
-PARSER = argparse.ArgumentParser(description=__doc__)
-PARSER.add_argument('files', type=argparse.FileType('r'))
+logging.basicConfig(level=logging.INFO)
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('input', type=argparse.FileType('r'), help="use '-' for stdin.")
 
 
 def f(x):
-    """Docstring."""
-    return x
+    """Docstring of the function.
+    >>> f('hello world')
+    'dlrow olleh'"""
+    return x[::-1]
 
 
 def main(args):
-    logging.basicConfig()
-    opts = PARSER.parse_args(args)
+    opts = parser.parse_args(args)
 
-    for file in opts.files:
-        print(f(file))
+    for line in opts.input:
+        x = line.rstrip()
+        print(f(x))
 
 
 if __name__ == '__main__':
