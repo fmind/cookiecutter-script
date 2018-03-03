@@ -8,7 +8,7 @@ This template includes:
 - *a line iterator* to remove new lines from the file
 - *docstring usage* to document/test your code
 
-You can test your code with the following command:
+You can test your code with this command:
 
 ~python3 -m doctest FILE~
 
