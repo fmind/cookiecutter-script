@@ -3,7 +3,6 @@
 
 import argparse
 import logging
-import sys
 
 logging.basicConfig(level=logging.INFO)
 
@@ -18,7 +17,7 @@ def f(x):
     return x[::-1]
 
 
-def main(args):
+def main(args=None):
     opts = parser.parse_args(args)
 
     for line in opts.input:
@@ -27,4 +26,4 @@ def main(args):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()
