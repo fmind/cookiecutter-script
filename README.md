@@ -1,5 +1,5 @@
-Python Script Template
-======================
+# Python Script Template
+
 
 This template includes:
 

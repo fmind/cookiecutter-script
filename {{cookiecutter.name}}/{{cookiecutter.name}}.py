@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Docstring of the program."""
 
-import argparse
 import logging
+import argparse
 
 logging.basicConfig(level=logging.INFO)
 
