@@ -10,8 +10,10 @@ This template includes:
 - **a line iterator** to remove new lines from the file
 - **docstring usage** to document/test your code
 
-You can test your code with this command::
+You can test your code with this command:
 
-  python3 -m doctest FILE
+```python3
+python3 -m doctest FILE
+```
 
 **Happy Python Scripting !**
