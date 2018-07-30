@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """Documentation of the program."""
 
-import sys
 import logging
 import argparse
 
@@ -24,8 +23,6 @@ def main(args=None):
     for line in opts.input:
         print(reverse(line.rstrip()))
 
-    return 0
-
 
 if __name__ == '__main__':
-    sys.exit(main())
+    main()
