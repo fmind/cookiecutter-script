@@ -12,6 +12,7 @@ parser.add_argument("input", type=argparse.FileType("r"), help="- for stdin.")
 
 def reverse(x):
     """Documentation of the function.
+
     >>> reverse('hello world !')
     '! dlrow olleh'"""
     return x[::-1]
