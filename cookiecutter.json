@@ -1,3 +1,11 @@
 {
-  "name": "pyscript"
+    "name": "pyscript",
+    "author": "anonymous",
+    "email": "anonymous@localhost",
+    "keywords": "python template develop",
+    "description": "TODO write a description",
+    "control": "github.com",
+    "username": "anonymous",
+    "url": "https://{{cookiecutter.control}}/{{cookiecutter.username}}/{{cookiecutter.name}}",
+    "python": "3.6"
 }

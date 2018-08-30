@@ -7,15 +7,15 @@ import argparse
 logging.basicConfig(level=logging.INFO)
 
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("input", type=argparse.FileType("r"), help="- for stdin.")
+parser.add_argument("input", type=argparse.FileType("r"), help="use '-' for stdin.")
 
 
-def reverse(x):
+def reverse(s: str) -> str:
     """Documentation of the function.
 
     >>> reverse('hello world !')
     '! dlrow olleh'"""
-    return x[::-1]
+    return s[::-1]
 
 
 def main(args=None):
