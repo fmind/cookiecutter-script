@@ -22,14 +22,12 @@ setuptools.setup(
         "License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)",
     ],
     extras_require={
+        "repl": ["jedi", "ipython", "ptpython"],
         "dist": ["pip", "twine", "wheel", "setuptools"],
-        "repl": ["jedi", "ptpdb", "ipython", "ptpython"],
         "test": ["pytest", "pytest-mypy", "pytest-black", "pytest-flakes"],
     },
     python_requires=">={{cookiecutter.python}}",
     install_requires=[],
     packages=setuptools.find_packages(),
-    entry_points={
-        "console_scripts": ["{{cookiecutter.name}}={{cookiecutter.name}}:main"]
-    },
+    entry_points={"console_scripts": ["{{cookiecutter.name}}={{cookiecutter.name}}:main"]},
 )
