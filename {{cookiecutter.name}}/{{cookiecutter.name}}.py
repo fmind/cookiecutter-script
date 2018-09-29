@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Documentation of the program."""
 
-import logging
 import argparse
+import logging
 
 logging.basicConfig(level=logging.INFO)
 
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("input", type=argparse.FileType("r"), help="use '-' for stdin.")
+parser.add_argument("input", type=argparse.FileType("r"))
 
 
 def reverse(s: str) -> str:
