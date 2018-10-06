@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Documentation of the program."""
+"""Documentation of the script."""
 
 import argparse
 import logging
