@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """Documentation of the script."""
 
 import argparse
