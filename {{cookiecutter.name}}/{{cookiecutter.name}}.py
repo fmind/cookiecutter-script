@@ -7,8 +7,8 @@ import logging
 
 logging.basicConfig(level=logging.INFO)
 
-parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("input", type=argparse.FileType("r"))
+PARSER = argparse.ArgumentParser(description=__doc__)
+PARSER.add_argument("input", type=argparse.FileType("r"))
 
 
 def reverse(s: str) -> str:
@@ -20,7 +20,7 @@ def reverse(s: str) -> str:
 
 
 def main(args=None):
-    opts = parser.parse_args(args)
+    opts = PARSER.parse_args(args)
 
     print(reverse(opts.input.read()))
 
