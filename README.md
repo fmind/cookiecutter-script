@@ -1,1 +1,1 @@
-# cookiecutter-script.py
+# cookiecutter-script
